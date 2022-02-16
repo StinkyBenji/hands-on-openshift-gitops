@@ -3,6 +3,11 @@ kind: Application
 metadata:
   name: vault-server
 spec:
+  ignoreDifferences:
+    - group: admissionregistration.k8s.io
+      kind: MutatingWebhookConfiguration
+      jsonPointers:
+        - /webhooks/0/clientConfig/caBundle
   destination:
     namespace: vault
     server: "https://kubernetes.default.svc"
