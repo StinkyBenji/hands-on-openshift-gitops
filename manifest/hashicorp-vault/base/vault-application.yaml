@@ -25,6 +25,4 @@ spec:
         ui:
           enabled: true
   project: gitops-config
-  syncPolicy:
-    syncOptions:
-      - CreateNamespace=true
+  syncPolicy: {}
