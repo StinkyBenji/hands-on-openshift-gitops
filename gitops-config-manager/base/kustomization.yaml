@@ -3,8 +3,6 @@ kind: Kustomization
 
 bases:
   - ../../manifest/argocd/project/gitops-config/base
-  - ../../manifest/argocd/argocd-notifications/overlays
-  - ../../manifest/hashicorp-vault/base
 
 resources:
   - gitops-config-manager.yaml

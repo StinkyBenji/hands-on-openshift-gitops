@@ -3,6 +3,8 @@ kind: Kustomization
 
 bases:
   - ../base
+  - ../../manifest/argocd/argocd-notifications/overlays
+  - ../../manifest/hashicorp-vault/base
   
 patchesJson6902:
   - target:
