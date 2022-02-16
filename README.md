@@ -8,12 +8,13 @@ First, we need to install openshift-gitops operator on our OpenShift cluster. Th
 
 Once it's installed, we can configure the default openshift-gitops (an Argo CD instance) by executing 
 
-`oc apply -k openshift-gitops-operator/overlays`
+`oc apply -k gitops-config-manager/base`
 
 More details can be found in [README.md]
 
 ### Configure HashiCorp Vault
 
+Now we have
 Details can be found in [README.md]
 
 ### Configure the argocd-notifications controller
