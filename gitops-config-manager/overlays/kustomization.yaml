@@ -3,7 +3,7 @@ kind: Kustomization
 
 bases:
   - ../base
-  
+  - ../../secret-manager/base
 
 patchesJson6902:
   - target:

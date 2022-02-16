@@ -5,7 +5,7 @@ bases:
   - ../base
   - ../../manifest/argocd/argocd-notifications/overlays
   - ../../manifest/hashicorp-vault/base
-  - ../../secret-manager/base
+
   
 patchesJson6902:
   - target:
