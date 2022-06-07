@@ -4,6 +4,7 @@ kind: Kustomization
 bases:
   - ../../manifest/argocd/project/gitops-config/base
 
+
 resources:
-  - gitops-config-manager.yaml
+  - cluster-config-manager.yaml
   

@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: gitops-config-manager
+  name: cluster-config-manager
   namespace: openshift-gitops
 spec:
   destination:
     namespace: openshift-gitops
     server: https://kubernetes.default.svc
-  project: gitops-config
+  project: cluster-config
   source:
-    path: openshift-gitops-operator/overlays
+    path: /manifest/argocd/apps/sealed-secret/base
     repoURL: https://github.com/StinkyBenji/hands-on-openshift-gitops
     targetRevision: main
