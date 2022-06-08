@@ -9,6 +9,6 @@ spec:
     server: https://kubernetes.default.svc
   project: cluster-config
   source:
-    path: manifest/argocd/apps/sealed-secret/base
+    path: manifest/argocd/project/cluster-config/base
     repoURL: https://github.com/StinkyBenji/hands-on-openshift-gitops
     targetRevision: main

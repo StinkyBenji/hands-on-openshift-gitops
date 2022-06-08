@@ -16,23 +16,16 @@ spec:
       values: |
         app:
           address: "0.0.0.:8080"
-        providers:
-          dev_alerts:
-            type: "google_chat"
-            max_idle_conns:  50 
-            timeout: "30s" # Timeout for making requests to Provider.
-            proxy_url: "http://internal-squid-proxy.com:3128" 
-            template: "static/message.tmpl" 
-            thread_ttl: "12h" 
-            dry_run: false
+        service:
+          port: '8080'
         templates:
           message.tmpl: |
             *({{.Labels.severity | toUpper }}) {{ .Labels.alertname | Title }} - {{.Status | Title }}*
             {{ range .Annotations.SortedPairs -}}
             {{ .Name | Title }}: {{ .Value}}
             {{ end -}}
-      valueFiles: 
-        - secrets+age-import://helm-secrets-private-keys/key.txt?<relative/path/to/the/encrypted/secrets.yaml>   
+      valueFiles:
+        - /helm-values/endpoint.yaml
     targetRevision: main
   syncPolicy:
     automated:

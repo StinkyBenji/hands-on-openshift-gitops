@@ -1,0 +1,16 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: helm-values
+  namespace: calert
+spec:
+  encryptedData:
+    endpoint.yaml: AgCwyJrpwNCJEUV5LZqMTVmZMbZIanN2W2GSpUDvgtQmQpoRfnAOlv8txqc/M5Nt427EEJ2weg9W/M51kk1L/TA0GPIm7m+oxLLh2yAzqUArIrUnxjIEwbMouy/n8DxNt0jCyCxJiw8Xk2zp7rPBAQWkWPW1/fnJByBVj+IJz2NuTmZSVdfvHey7FgdIavSbBkiinBwuUu7aWCow2BhOXdoWTLlHZkaO3S2+kpREipn7tApwaO8NhOqMXn1yj0X/G+HmRNOvDDQ30dx2O5GP6RxSwm6daCgTPCYFrGRn2nNSD77QdoW7LRooy3HW+bu+xLiOCwtdiDS7dJ//YVL9GqosihCNZwRVBM90DS2N8uwefedMAvNCidNSlTBdWLR9Gb9boKZw7ltKIZArrF3oaU8hCeSns3AY/wVN3+aqRjQQujU8Mz0JrP38fDh09j9ypIS3xWqBPH1m5XCPqxZsZIyMq9rAapLXxlJoEDR/30nf3ti/RXvmdUYHuTqgiyZTbdRft40moA15PjRO8lk9j4jmcEd91BFfmQZtxpiXVIyPw3gg4avpv0r7XW0nr5n4XN3q+j06YTl2CuvTFFTtQ5AseVGYdJrhX0k0pS6ELegv2XGZQ6b6De8aBs1Ec7NZ0nhKeLZSU5RTeKInLlTtOi3iEX6qN2B+RueqhmTDrW3XI1rCTDASgTWK1WUrWhFPxvFF3DV2Gf5Z+0rxlRMKue6JStPiM9+T8eEaeE3jdu1KIoGL47PYMzLsldCtxZR8JFFWzDDk1Nfe24du7Xxbg4DnJeezT3sfNQ8IaPNMJvysHd4PYTZYA5wDHuooiSKuB1TWqO1WG4vr+Yf6hv9r3T3ft53OugnFi86MUKwH6emTUmOYEJYMJDpHQY+W5KWIyEWVzyHjYbRqb2nRVZ4rtXK6Q+rt+y4c6lg=
+  template:
+    data: null
+    metadata:
+      creationTimestamp: null
+      name: helm-values
+      namespace: calert
+
