@@ -1,3 +1,4 @@
 argocd-copy.yaml
-/manifest/argocd/apps/calert
 /cluster-config
+key.txt
+test.yaml
