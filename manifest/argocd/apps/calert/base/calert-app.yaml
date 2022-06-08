@@ -15,9 +15,9 @@ spec:
     helm:
       values: |
         app:
-          address: "0.0.0.:8080"
+          address: "0.0.0.0:8080"
         service:
-          port: '8080'
+          port: "8080"
         templates:
           message.tmpl: |
             *({{.Labels.severity | toUpper }}) {{ .Labels.alertname | Title }} - {{.Status | Title }}*
