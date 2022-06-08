@@ -8,7 +8,7 @@ spec:
   destination:
     namespace: calert-helm
     server: https://kubernetes.default.svc
-  project: gitops-config
+  project: cluster-config
   source:
     path: /contrib/helm
     repoURL: https://github.com/mr-karan/calert
