@@ -4,6 +4,7 @@ kind: Kustomization
 bases:
   - ../../../apps/sealed-secret/base
   - ../../../apps/argocd-helm/overlays
+
 resources:
   - cluster-config.yaml
 

@@ -3,11 +3,10 @@
   value:
     values: |
       nameOverride: custom-argo
-      global:
-        securityContext:
+      redis:  
+        containerSecurityContext:
           runAsUser:
           fsGroup:
-          runAsGroup:
       repoServer:
         volumeMounts:
           - name: helm-values
@@ -16,5 +15,6 @@
           - name: helm-values
             secret:
               secretName: helm-values
-      route:
-        enabled: true     
+      server:  
+        route:
+          enabled: true     
