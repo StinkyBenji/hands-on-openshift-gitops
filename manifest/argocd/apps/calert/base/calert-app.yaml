@@ -4,9 +4,9 @@ metadata:
   name: calert-helm
 spec:
   destination:
-    namespace: calert-helm
+    namespace: argocd
     server: https://kubernetes.default.svc
-  project: cluster-config
+  project: default
   source:
     path: /contrib/helm
     repoURL: https://github.com/mr-karan/calert

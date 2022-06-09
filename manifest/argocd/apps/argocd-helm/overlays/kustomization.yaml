@@ -3,6 +3,7 @@ kind: Kustomization
 
 bases:
   - ../base
+  - ../../calert/base
 
 resources:
   - sealed-values.yaml
