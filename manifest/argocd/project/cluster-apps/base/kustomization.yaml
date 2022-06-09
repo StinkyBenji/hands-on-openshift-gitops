@@ -6,6 +6,6 @@ bases:
   - ../../../apps/argocd-helm/overlays
 
 resources:
-  - cluster-config.yaml
+  - cluster-apps.yaml
 
   
