@@ -3,6 +3,4 @@ kind: Kustomization
 
   
 resources:
-  - argocd.yaml
-  - argocd-admingrp.yaml
-  - clusterrolebinding.yaml
+  - argocd-server.yaml

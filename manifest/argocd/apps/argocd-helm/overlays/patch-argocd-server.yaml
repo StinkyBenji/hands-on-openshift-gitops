@@ -1,50 +1,6 @@
-apiVersion: argoproj.io/v1alpha1
-kind: ArgoCD
-metadata:
-  finalizers:
-    - argoproj.io/finalizer
-  generation: 3
-  name: argocd
-  namespace: sealed-secrets
-spec:
-  server:
-    autoscale:
-      enabled: false
-    grpc:
-      ingress:
-        enabled: false
-    ingress:
-      enabled: false
-    resources:
-      limits:
-        cpu: 500m
-        memory: 256Mi
-      requests:
-        cpu: 125m
-        memory: 128Mi
-    route:
-      enabled: true
-    service:
-      type: ''
-  grafana:
-    enabled: false
-    ingress:
-      enabled: false
-    route:
-      enabled: false
-  prometheus:
-    enabled: false
-    ingress:
-      enabled: false
-    route:
-      enabled: false
-  initialSSHKnownHosts: {}
-  rbac:
-    defaultPolicy: ''
-    policy: |
-      g, system:cluster-admins, role:admin
-    scopes: '[groups]'
-  repo:
+- op: add
+  path: /spec/repo/-
+  value:
     env:
       - name: HELM_PLUGINS
         value: /custom-tools/helm-plugins/
@@ -111,47 +67,15 @@ spec:
         name: custom-tools
       - mountPath: /helm-secrets-private-keys/
         name: helm-secrets-private-keys
+      - mountPath: /helm-values
+        name: helm-values
+      - mountPath: 
     volumes:
       - emptyDir: {}
         name: custom-tools
       - name: helm-secrets-private-keys
         secret:
           secretName: helm-secrets-private-keys
-  dex:
-    openShiftOAuth: true
-    resources:
-      limits:
-        cpu: 500m
-        memory: 256Mi
-      requests:
-        cpu: 250m
-        memory: 128Mi
-  ha:
-    enabled: false
-    resources:
-      limits:
-        cpu: 500m
-        memory: 256Mi
-      requests:
-        cpu: 250m
-        memory: 128Mi
-  tls:
-    ca: {}
-  redis:
-    resources:
-      limits:
-        cpu: 500m
-        memory: 256Mi
-      requests:
-        cpu: 250m
-        memory: 128Mi
-  controller:
-    processors: {}
-    resources:
-      limits:
-        cpu: '2'
-        memory: 2Gi
-      requests:
-        cpu: 250m
-        memory: 1Gi
-    sharding: {}
+      - name: helm-values
+        secret:
+          secretName: helm-values

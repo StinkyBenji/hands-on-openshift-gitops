@@ -3,7 +3,7 @@ kind: Kustomization
 
 bases:
   - ../../../apps/sealed-secret/base
-  - ../../../apps/calert/base
+  - ../../../apps/argocd-helm/base
 resources:
   - cluster-config.yaml
 
