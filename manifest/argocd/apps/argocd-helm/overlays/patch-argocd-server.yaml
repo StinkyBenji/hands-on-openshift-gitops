@@ -6,15 +6,6 @@
       redis:  
         securityContext:
           runAsUser: 1000790001
-          
-      repoServer:
-        volumeMounts:
-          - name: helm-values
-            mountPath: /helm-values
-        volumes:
-          - name: helm-values
-            secret:
-              secretName: helm-values
       openshift:
         enabled: true
       server:  

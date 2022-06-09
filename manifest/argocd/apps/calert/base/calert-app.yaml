@@ -1,29 +1,15 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: calert-helm
+  name: calert
 spec:
   destination:
     namespace: argocd
     server: https://kubernetes.default.svc
   project: cluster-config
   source:
-    path: contrib/helm
-    repoURL: https://github.com/mr-karan/calert
-    helm:
-      values: |
-        app:
-          address: "0.0.0.0:8080"
-        service:
-          port: "8080"
-        templates:
-          message.tmpl: |
-            *({{.Labels.severity | toUpper }}) {{ .Labels.alertname | Title }} - {{.Status | Title }}*
-            {{ range .Annotations.SortedPairs -}}
-            {{ .Name | Title }}: {{ .Value}}
-            {{ end -}}
-      valueFiles:
-        - /helm-values/calert-helm.yaml
+    path: manifest/argocd/apps/calert/base/apps
+    repoURL: https://github.com/StinkyBenji/hands-on-openshift-gitops
     targetRevision: main
   syncPolicy:
     automated:
