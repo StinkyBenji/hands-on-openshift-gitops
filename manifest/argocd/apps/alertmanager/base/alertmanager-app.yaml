@@ -8,7 +8,7 @@ spec:
     server: https://kubernetes.default.svc
   project: cluster-config
   source:
-    path: manifest/config/alertmanager/overlays
+    path: manifest/config/alertmanager
     repoURL: https://github.com/StinkyBenji/hands-on-openshift-gitops
     targetRevision: main
   syncPolicy:
