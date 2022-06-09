@@ -3,3 +3,5 @@ argocd-copy.yaml
 key.txt
 test.yaml
 /manifest/argocd/apps/alertmanager
+/manifest/config/
+alertmanager.yaml
