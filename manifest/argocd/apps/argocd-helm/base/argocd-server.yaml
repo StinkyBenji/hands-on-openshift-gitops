@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: argocd
 spec:
-  project: cluster-apps
+  project: cluster-config
   source:
     chart: argo-cd
     repoURL: https://argoproj.github.io/argo-helm
@@ -13,6 +13,3 @@ spec:
   destination:
     server: "https://kubernetes.default.svc"
     namespace: argocd
-  syncPolicy:
-    syncOptions:
-      - CreateNamespace=true
