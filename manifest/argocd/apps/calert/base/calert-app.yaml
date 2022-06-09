@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: calert
+  name: calert-helm
 spec:
   destination:
     namespace: argocd
@@ -23,7 +23,7 @@ spec:
             {{ .Name | Title }}: {{ .Value}}
             {{ end -}}
       valueFiles:
-        - /helm-values/calert.yaml
+        - /helm-values/calert-helm.yaml
     targetRevision: main
   syncPolicy:
     automated:
