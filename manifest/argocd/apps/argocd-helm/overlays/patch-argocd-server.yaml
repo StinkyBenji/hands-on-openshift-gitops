@@ -5,8 +5,8 @@
       nameOverride: custom-argo
       redis:  
         containerSecurityContext:
-          runAsUser:
-          fsGroup:
+          runAsUser: 1000660000
+          fsGroup: 1000660000
       repoServer:
         volumeMounts:
           - name: helm-values
@@ -15,6 +15,8 @@
           - name: helm-values
             secret:
               secretName: helm-values
+      openshift:
+        enabled: true
       server:  
         route:
           enabled: true     
