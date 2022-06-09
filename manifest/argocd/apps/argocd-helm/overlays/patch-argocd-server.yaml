@@ -4,9 +4,9 @@
     values: |
       nameOverride: custom-argo
       redis:  
-        containerSecurityContext:
+        securityContext:
           runAsUser: 1000660000
-          fsGroup: 1000660000
+          
       repoServer:
         volumeMounts:
           - name: helm-values
