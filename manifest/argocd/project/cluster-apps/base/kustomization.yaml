@@ -5,7 +5,7 @@ bases:
   - ../../../apps/sealed-secret/base
   - ../../../apps/argocd-helm/overlays
   - ../../../apps/calert/base
-
+  - ../../../apps/alertmanager/base
 resources:
   - cluster-apps.yaml
 

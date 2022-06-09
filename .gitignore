@@ -2,6 +2,3 @@ argocd-copy.yaml
 /cluster-config
 key.txt
 test.yaml
-/manifest/argocd/apps/alertmanager
-/manifest/config/
-alertmanager.yaml

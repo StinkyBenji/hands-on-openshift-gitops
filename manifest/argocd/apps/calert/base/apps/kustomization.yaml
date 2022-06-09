@@ -5,3 +5,4 @@ resources:
   - calert.yaml
   - calert-config.yaml
   - calert-secret.yaml
+  - calert-service.yaml
