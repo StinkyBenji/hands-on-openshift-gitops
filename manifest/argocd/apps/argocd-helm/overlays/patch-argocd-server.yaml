@@ -5,7 +5,7 @@
       nameOverride: custom-argo
       redis:  
         securityContext:
-          runAsUser: 1000660000
+          runAsUser: 1000790001
           
       repoServer:
         volumeMounts:

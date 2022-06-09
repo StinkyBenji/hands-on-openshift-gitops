@@ -6,9 +6,9 @@ spec:
   destination:
     namespace: argocd
     server: https://kubernetes.default.svc
-  project: default
+  project: cluster-apps
   source:
-    path: /contrib/helm
+    path: contrib/helm
     repoURL: https://github.com/mr-karan/calert
     helm:
       values: |
