@@ -16,6 +16,5 @@
           - name: helm-values
             secret:
               secretName: helm-values
-      server:
-        route:
-          enabled: true     
+      route:
+        enabled: true     
