@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: argocd
 spec:
-  project: cluster-config
+  project: cluster-apps
   source:
     chart: argo-cd
     repoURL: https://argoproj.github.io/argo-helm
