@@ -1,0 +1,15 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  name: helm-values
+  namespace: argocd
+spec:
+  encryptedData:
+    endpoint.yaml: AgBNVGsyDqBBKlyV5OJieg4ixiiVdYihhdhy8OcdobM40e6/JbcPnI65/ahA/tUChHXvJnFCV2Rcqje3OopuKwlLmouMDKDqk+xQ7tYnIc2f+TVfA7S2wAo/ABN0/sebhxqGz3+Tijdsd5q70fBi96D/s6CIN19e3kWOGt/02w53fWDQ53iuBnRcQamrKIj1GTC5ecj2XK5gS5QCfefK+OkasnaOAwpdPakDfhnCLLwQP76Mk728UTAI1LhTaeZ4PBhPicXJn9CxgiF7rBzg8XLYAtIYcVEel2vJUTVCOWNh7U+3KZZSYuwlOWyvVSMPAaeuxIqpqnjkK5m+ZGAaQA2KV3IcD7/MenfYrKX5BBNJDVzmt5Vbi3DXVnVfIS/iPKP0TWqtzZ9t3/Ey9dNvPcfi/yMhdqzqe+fWaFpKkjEeszf0HWN6NdpvlVfCWB2tmOXZQkIyqP7/jj/iHwZjZ71aL6zxH7UUADYB5mNzzX/tPLtFsUbJ2ER5c0Pwageho1LOlt36awBvn5Azjrdj68ZRvwqO0VR2uL2kf6nKYybz/IjZuvSgGGx7ih415MqtUKeOOlvPq8hGJfPR/qAARpDJ/I0qxO2uCKCoi0ojjHTqmw+hiLz2SfcnfcqV9MdQr1gdsvaCHkf6PAGvWOBFUbYrQXxT+Tuk0PGv0NwBZv/ktlcmxpH118WRsln5IECCKDKl9/WtBqe2lxMZ8QRMtzDHOVQ5nNyPWBBemiF8kl6YR8pAWZWV4QOJlB+OKN2l4nPHcwQLHONQp+/FfPzq1blcoZ0fLHT4UjEFsbeZCxseoCbyvapaxT6SleBIRu6k/GJBUl1B+I3zpnSATide8AS0rGCCQg4dvvJhstaXCdz5CS22KUCdcmk8fScd707H1oJ8YnZTRWNhjVBAcSTJ2G5i+gaFtHRe8L8=
+  template:
+    data: null
+    metadata:
+      creationTimestamp: null
+      name: helm-values
+      namespace: argocd
+

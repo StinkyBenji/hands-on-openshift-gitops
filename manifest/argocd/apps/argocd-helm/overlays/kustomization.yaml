@@ -4,6 +4,8 @@ kind: Kustomization
 bases:
   - ../base
 
+resources:
+  - sealed-values.yaml
 
 patchesJson6902:
   - target:

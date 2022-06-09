@@ -2,8 +2,6 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: calert-helm
-  labels:
-    gitops.ownedBy: gitops-config
 spec:
   destination:
     namespace: calert-helm

@@ -8,3 +8,12 @@
           runAsUser:
           fsGroup:
           runAsGroup:
+      repoServer:
+        volumeMounts:
+          - name: helm-values
+            mountPath: /helm-values
+        volumes:
+          - name: helm-values
+            secret:
+              secretName: helm-values
+            

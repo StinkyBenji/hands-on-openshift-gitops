@@ -11,4 +11,4 @@ spec:
   source:
     path: manifest/argocd/apps/argocd-helm/overlays
     repoURL: https://github.com/StinkyBenji/hands-on-openshift-gitops
-    targetRevision: master
+    targetRevision: main

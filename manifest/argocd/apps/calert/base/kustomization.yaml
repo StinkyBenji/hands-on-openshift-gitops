@@ -3,4 +3,3 @@ kind: Kustomization
 
 resources:
   - calert-app.yaml
-  - sealed-values.yaml
